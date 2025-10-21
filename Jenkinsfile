@@ -13,6 +13,12 @@ pipeline {
                 checkout scm
             }
         }
+        stage('Check Files') {
+    steps {
+        sh 'ls -R'
+    }
+}
+
 
         stage('Build Docker Image') {
             steps {
